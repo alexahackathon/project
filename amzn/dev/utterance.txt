@@ -1,5 +1,6 @@
-SendMessageIntent send message to {nameInput}
-SendMessageIntent send message to {nameInput} {payloadInput}
-SendMessageIntent send message to {numberInput}
-SendMessageIntent send message to {numberInput} {payloadInput}
 
+askNameIntent send message to {nameInput}
+
+askNumberIntent send message to {numberInput}
+
+askPayloadIntent say {payloadInput}
