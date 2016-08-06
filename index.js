@@ -12,7 +12,16 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 
 app.get("/", function(req,res){
-  res.render("home");
+  knex('users').join('contacts', 'users.id', 'contacts.user_id')
+    .select('users.firstname as user_name', 
+            'users.phone as user_phone', 
+            'contacts.firstname as contacts_name',
+            'contacts.phone as contacts_phone')
+    .where('users.id', 1)
+    .then((data) => {
+        res.render("home", {data});
+    })
+  
 });
 
 app.get("/api/contacts", function(req,res){
@@ -34,7 +43,7 @@ app.post("/api/contacts", function(req,res){
     user_id: 1
     })
     .then((data) => {
-      res.send(data)
+      res.redirect('/')
     })
 });
 
