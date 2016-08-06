@@ -13,6 +13,11 @@ html, body {
 	}
 }
 
+.contacts {
+	overflow-y: scroll;
+	height: 30vh;
+}
+
 legend {
 	font-size: 110%;
 }

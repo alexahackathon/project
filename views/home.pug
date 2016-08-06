@@ -35,17 +35,21 @@ body
 						.col-lg-8.col-lg-offset-2
 							input(id="submit" type="submit" class="form-control" value="submit")
 	.container-fluid.text-center
+		.contacts
+			h2 Current Contacts
+			ul(class="list-group")
+				each val in data
+					li(class="list-group-item") #{val.contacts_name} : #{val.contacts_phone}
 		h1 Twilio x Amazon Echo @ General Assembly
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		p Text Me Maybe is a browser-based interface to Alexa. The site is intended for users add contact info into our database. The users then will be able to use their personal assistant, Alexa, to send message to anyone in our database.
 		hr
-		h4 To Use Text Me Maybe:
-
+		h3 To Use Text Me Maybe:
 		.col-lg-4
-			h4 Fill out the form
+			h4 Fill out the form above
 			img(src="http://www.flowmax.cz/images/Flowmax/questionnaire-icon-7f.png")
 		.col-lg-4
 			h4 Speak to Alexa
 			img(src="http://wholesalesolutions.orange.com/var/usine/storage/images/wholesalesolutions/our-solutions/our-solutions-content-sg-2-colonnes/voice/orange-wholesale-voice3/1498274-1-eng-GB/Orange-Wholesale-Voice.png")
 		.col-lg-4
-			h4 Send the text!
+			h4 Receive the text!
 			img(src="https://cdn1.iconfinder.com/data/icons/mobile-iphone-outline/512/oYPS__mobile_iphone_sms_chat_text_message_phone_bubble_telephone_call_talk_-512.png")

@@ -9,6 +9,10 @@ html, body {
 .navbar-header a {
   font-size: 200%; }
 
+.contacts {
+  overflow-y: scroll;
+  height: 30-vh; }
+
 legend {
   font-size: 110%; }
 
