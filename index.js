@@ -11,6 +11,10 @@ app.use(morgan("tiny"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 
+if(process.env.NODE_ENV !== "production"){
+  require('dotenv').load();
+}
+
 app.get("/", function(req,res){
   res.render("home");
 });
@@ -34,7 +38,7 @@ app.post("/api/contacts", function(req,res){
     user_id: 1
     })
     .then((data) => {
-      res.send(data)
+      res.redirect(data)
     })
 });
 
@@ -42,6 +46,6 @@ app.get("*", function(req,res){
   res.status("404");
 });
 
-app.listen(3000, function(){
-  console.log("Server is listening on port 3000");
+app.listen(process.env.PORT || 3000, function() {
+  console.log("Listening on port 3000...")
 });
