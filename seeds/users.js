@@ -6,12 +6,6 @@ exports.seed = function(knex, Promise) {
       firstname: 'John', 
       phone: '8082921010'
     }),
-    knex('contacts').del(),
-    knex('contacts').insert({
-      id:1,
-      firstname: 'Alex',
-      phone: '8087542941',
-      user_id: '1'
-    })
+    knex('contacts').del()
   ]);
 };
