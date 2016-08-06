@@ -1,0 +1,50 @@
+{
+  "intents": [
+    {
+      "intent": "MessagePayloadIntent",
+      "slots": [
+        {
+          "name": "payloadInput",
+          "type": "LIST_OF_CANNED_MESSAGES"
+        }
+      ]
+    
+    },
+    {
+      "intent": "MessageNameIntent",
+      "slots": [
+        {
+          "name": "nameInput",
+          "type": "AMAZON.US_FIRST_NAME"
+        }
+      ]
+    },
+    {
+      "intent": "MessageNumberIntent",
+      "slots": [
+        {
+          "name": "numberInput",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.RepeatIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.YesIntent"
+    },
+    {
+      "intent": "AMAZON.NoIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
