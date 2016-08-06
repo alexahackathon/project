@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Text Me Maybe
+	link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+	link(rel="stylesheet" href="//bootswatch.com/readable/bootstrap.min.css")
+	script(src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
+	script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
+	link(rel="stylesheet", href="stylesheets/style.css")
+body
+	.container-fluid
+		nav.navbar.navbar-inverse
+			.container-fluid
+				.navbar-header
+					button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2")
+						span(class="sr-only") Toggle navigation
+						span(class="icon-bar")
+						span(class="icon-bar")
+						span(class="icon-bar")
+					a(class="navbar-brand" href="#") Text Me Maybe
+			div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-2")
+				form(action="/" class="form-horizontal" method="POST")
+					fieldset
+						legend ENTER YOUR FRIEND'S INFO
+					.form-group
+						label(for="firstname" class="col-lg-2 control-label") First Name: 
+						.col-lg-8
+							input(id="firstname" type="text" class="form-control" placeholder="Charlie" name="firstname")
+					.form-group
+						label(for="phone" class="col-lg-2 control-label") Phone Number: 
+						.col-lg-8
+							input(id="phone" type="text" class="form-control" placeholder="510-123-4567" name="phone")
+					.form-group
+						.col-lg-8.col-lg-offset-2
+							input(id="submit" type="submit" class="form-control" value="submit")
+	.container-fluid.text-center
+		h1 Twilio x Amazon Echo @ General Assembly
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		hr
+		h4 To Use Text Me Maybe:
+
+		.col-lg-4
+			h4 Fill out the form
+			img(src="http://www.flowmax.cz/images/Flowmax/questionnaire-icon-7f.png")
+		.col-lg-4
+			h4 Speak to Alexa
+			img(src="http://wholesalesolutions.orange.com/var/usine/storage/images/wholesalesolutions/our-solutions/our-solutions-content-sg-2-colonnes/voice/orange-wholesale-voice3/1498274-1-eng-GB/Orange-Wholesale-Voice.png")
+		.col-lg-4
+			h4 Send the text!
+			img(src="https://cdn1.iconfinder.com/data/icons/mobile-iphone-outline/512/oYPS__mobile_iphone_sms_chat_text_message_phone_bubble_telephone_call_talk_-512.png")
