@@ -24,6 +24,14 @@ app.get("/", function(req,res){
   
 });
 
+app.get("/api/contacts/:name", function(req,res){
+  var name = req.params.name.toLowerCase()
+  knex('contacts').where('firstname', name).first()
+    .then((data) => {
+      res.send(data)
+    })
+});
+
 app.get("/api/contacts", function(req,res){
   knex('users').join('contacts', 'users.id', 'contacts.user_id')
     .select('users.firstname as user_name', 
@@ -38,7 +46,7 @@ app.get("/api/contacts", function(req,res){
 
 app.post("/api/contacts", function(req,res){
   knex('contacts').insert({
-    firstname: req.body.firstname,
+    firstname: req.body.firstname.toLowerCase(),
     phone: req.body.phone,
     user_id: 1
     })
