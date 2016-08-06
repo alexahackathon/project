@@ -17,6 +17,10 @@ app.get("/", function(req,res){
 
 app.get("/api/contacts", function(req,res){
   knex('users').join('contacts', 'users.id', 'contacts.user_id')
+    .select('users.firstname as user_name', 
+            'users.phone as user_phone', 
+            'contacts.firstname as contacts_name',
+            'contacts.phone as contacts_phone')
     .where('users.id', 1)
     .then((data) => {
       res.send(data)
