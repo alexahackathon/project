@@ -1,17 +1,7 @@
 {
   "intents": [
     {
-      "intent": "MessagePayloadIntent",
-      "slots": [
-        {
-          "name": "payloadInput",
-          "type": "LIST_OF_CANNED_MESSAGES"
-        }
-      ]
-    
-    },
-    {
-      "intent": "MessageNameIntent",
+      "intent": "askNameIntent",
       "slots": [
         {
           "name": "nameInput",
@@ -20,11 +10,20 @@
       ]
     },
     {
-      "intent": "MessageNumberIntent",
+      "intent": "askNumberIntent",
       "slots": [
         {
           "name": "numberInput",
           "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "askPayloadIntent",
+      "slots": [
+        {
+          "name": "payloadInput",
+          "type": "LIST_OF_CANNED_MESSAGES"
         }
       ]
     },
