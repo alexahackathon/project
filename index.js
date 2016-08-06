@@ -32,6 +32,9 @@ app.get("/api/contacts/:name", function(req,res){
   var name = req.params.name.toLowerCase()
   knex('contacts').where('firstname', name).first()
     .then((data) => {
+      if (!data) {
+        res.json({phone: -1})
+      }
       res.send(data)
     })
 });
