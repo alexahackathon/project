@@ -35,7 +35,7 @@ app.get("/api/contacts/:name", function(req,res){
       if (!data) {
         res.json({phone: -1})
       }
-      res.send(data)
+      res.json(data)
     })
 });
 
@@ -47,7 +47,7 @@ app.get("/api/contacts", function(req,res){
             'contacts.phone as contacts_phone')
     .where('users.id', 1)
     .then((data) => {
-      res.send(data)
+      res.json(data)
     })
 });
 
